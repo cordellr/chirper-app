@@ -11,8 +11,7 @@ class MessageContainer extends Component {
   };
 
   render() {
-    //console.log(this.state.messages[1].id);
-    return <MessageBox />;
+    return <MessageBox messages={this.state.messages} />;
   }
 }
 
