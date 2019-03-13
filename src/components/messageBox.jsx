@@ -2,13 +2,17 @@ import React from "react";
 //import { getMessages } from "./messageContainer";
 
 const MessageBox = props => {
+  const listGroupStyle = {
+    border: "none"
+  };
+
   const cardStyle = {
     maxWidth: "18rem"
   };
 
   return (
     <ul className="list-group">
-      <li className="list-group-item">
+      <li className="list-group-item" style={listGroupStyle}>
         <div className="card border-primary mb-3" style={cardStyle}>
           <div className="card-body text-primary">
             <h5 className="card-title">Primary card title</h5>
