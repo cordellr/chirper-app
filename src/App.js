@@ -7,6 +7,7 @@ class App extends Component {
   render() {
     return (
       <main className="container">
+        <h1 className="text-center font-weight-bold m-4">Chirper</h1>
         <MessageContainer />
       </main>
     );

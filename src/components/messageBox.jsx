@@ -1,15 +1,19 @@
 import React from "react";
-//import { getMessages } from "./messageContainer";
 
 const MessageBox = props => {
+  //object destructuring
   const { messages } = props;
 
-  //console.log(messages[0].id);
-
+  //maps the chirps from messages array into list
+  //used bootstrap cards to format chirps
   return (
     <ul className="list-group">
       {messages.reverse().map(message => (
-        <li className="list-group-item" style={{ border: "none" }}>
+        <li
+          key={message.id}
+          className="list-group-item"
+          style={{ border: "none" }}
+        >
           <div
             className="card border-primary mb-3"
             style={{ maxWidth: "18rem" }}
@@ -21,7 +25,6 @@ const MessageBox = props => {
           </div>
         </li>
       ))}
-      ;
     </ul>
   );
 };
