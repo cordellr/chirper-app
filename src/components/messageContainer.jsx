@@ -23,7 +23,12 @@ class MessageContainer extends Component {
         messageText:
           "This is the third chirp, but it is not the least of chirps. New user, what do you have to say about all of this?"
       }
-    ]
+    ],
+
+    chirp: {
+      author: "",
+      messageText: ""
+    }
   };
 
   render() {
