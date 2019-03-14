@@ -8,7 +8,7 @@ const MessageBox = props => {
   //used bootstrap cards to format chirps
   return (
     <ul className="list-group">
-      {messages.reverse().map(message => (
+      {messages.map(message => (
         <li
           key={message.id}
           className="list-group-item"

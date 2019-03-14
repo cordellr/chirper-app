@@ -25,16 +25,31 @@ class MessageContainer extends Component {
       }
     ],
 
-    chirp: {
-      author: "",
-      messageText: ""
-    }
+    newAuthor: "",
+    newMessageText: ""
+  };
+
+  //the two methods below take the target values on change
+  //and set them as the state values.
+  handleAuthorChange = author => {
+    this.setState({ newAuthor: author });
+    console.log(this.state.newAuthor);
+  };
+
+  handleMessageChange = messageText => {
+    this.setState({ newMessageText: messageText });
+    console.log(this.state.newMessageText);
   };
 
   render() {
     return (
       <div>
-        <InputForm />
+        <InputForm
+          onAuthorChange={this.handleAuthorChange}
+          onMessageChange={this.handleMessageChange}
+          author={this.state.newAuthor}
+          messageText={this.state.newMessageText}
+        />
         <MessageBox messages={this.state.messages} />
       </div>
     );
