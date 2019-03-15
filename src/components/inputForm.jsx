@@ -13,7 +13,6 @@ const InputForm = props => {
     <form>
       <div className="form-group m-2" style={{ maxWidth: "12rem" }}>
         <input
-          id="nameField"
           type="text"
           className="form-control"
           placeholder="Name"
@@ -23,7 +22,6 @@ const InputForm = props => {
       </div>
       <div className="form-group m-2" style={{ maxWidth: "24rem" }}>
         <textarea
-          id="messageField"
           className="form-control"
           placeholder="Chirp text..."
           rows="3"
