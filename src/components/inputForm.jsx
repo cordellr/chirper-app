@@ -18,7 +18,7 @@ const InputForm = props => {
           className="form-control"
           placeholder="Name"
           //   value={newAuthor}
-          onChange={event => onAuthorChange(event.target.value)}
+          onChange={onAuthorChange}
         />
       </div>
       <div className="form-group m-2" style={{ maxWidth: "24rem" }}>
@@ -28,10 +28,14 @@ const InputForm = props => {
           placeholder="Chirp text..."
           rows="3"
           //   value={newMessageText}
-          onChange={event => onMessageChange(event.target.value)}
+          onChange={onMessageChange}
         />
       </div>
-      <button type="button" onClick={handleSubmit} className="btn btn-primary">
+      <button
+        type="button"
+        onClick={handleSubmit}
+        className="btn btn-primary m-2"
+      >
         Submit
       </button>
     </form>

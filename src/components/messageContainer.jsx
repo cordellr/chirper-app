@@ -6,10 +6,10 @@ class MessageContainer extends Component {
   state = {
     messages: [
       {
-        id: 1,
-        author: "Joe Schmo",
+        id: 3,
+        author: "Jack Black",
         messageText:
-          "This is chirp one. It goes on for a while--inserts some random commentary here--and then stops."
+          "This is the third chirp, but it is not the least of chirps. New user, what do you have to say about all of this?"
       },
       {
         id: 2,
@@ -18,10 +18,10 @@ class MessageContainer extends Component {
           "This is chirp number two. It will continue to expound about nothing, and then trail off into..."
       },
       {
-        id: 3,
-        author: "Jack Black",
+        id: 1,
+        author: "Joe Schmo",
         messageText:
-          "This is the third chirp, but it is not the least of chirps. New user, what do you have to say about all of this?"
+          "This is chirp one. It goes on for a while--inserts some random commentary here--and then stops."
       }
     ],
 
@@ -32,13 +32,13 @@ class MessageContainer extends Component {
 
   //the two methods below take the target values on change
   //from inputForm and set them as the state values.
-  handleAuthorChange = author => {
-    this.setState({ author });
+  handleAuthorChange = e => {
+    this.setState({ author: e.target.value });
     console.log(this.state.author);
   };
 
-  handleMessageChange = messageText => {
-    this.setState({ messageText });
+  handleMessageChange = e => {
+    this.setState({ messageText: e.target.value });
     console.log(this.state.messageText);
   };
 
@@ -48,12 +48,12 @@ class MessageContainer extends Component {
   handleSubmit = () => {
     this.setState({
       messages: [
-        ...this.state.messages,
         {
           id: this.state.id,
           author: this.state.author,
           messageText: this.state.messageText
-        }
+        },
+        ...this.state.messages
       ]
     });
   };

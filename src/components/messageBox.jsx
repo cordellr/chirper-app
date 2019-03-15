@@ -14,12 +14,9 @@ const MessageBox = props => {
           className="list-group-item"
           style={{ border: "none" }}
         >
-          <div
-            className="card border-primary mb-3"
-            style={{ maxWidth: "18rem" }}
-          >
-            <div className="card-body text-primary">
-              <h5 className="card-title">{message.author}</h5>
+          <div className="card border-info mb-3" style={{ maxWidth: "18rem" }}>
+            <div className="card-header">{message.author}</div>
+            <div className="card-body">
               <p className="card-text">{message.messageText}</p>
             </div>
           </div>
